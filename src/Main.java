@@ -62,6 +62,16 @@ public class Main {
                     double amount = sc.nextDouble();
                     bank.depositMoney(accountNumber, amount);}
                     break;
+
+                case 5:{
+                    System.out.println("\n--------------------------------------------------------");
+                    System.out.print("Enter account number : ");
+                    int accountNumber = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter balance      : ");
+                    double amount = sc.nextDouble();
+                    bank.withdrawMoney(accountNumber, amount);}
+                    break;
                 default:
                     System.out.println("Invalid Choice");
             }
