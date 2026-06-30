@@ -57,4 +57,16 @@ public class Bank {
         }
         account.withdraw(amount);
     }
+
+    public void transferMoney(int senderAccountNumber, int receiverAccountNumber, double amount){
+        Account senderAccount = findAccount(senderAccountNumber);
+        Account receiverAccount = findAccount(receiverAccountNumber);
+
+        if(senderAccount == null || receiverAccount == null){
+            System.out.println("Account not found");
+            return;
+        }
+        senderAccount.sendMoney(amount);
+        receiverAccount.receiveMoney(amount);
+    }
 }
