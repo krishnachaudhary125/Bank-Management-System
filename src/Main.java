@@ -100,3 +100,8 @@ public class Main {
         }while(choice != 8);
     }
 }
+
+//case 8:
+//        System.out.println("Thank you for using Bank Management System!");
+//    scanner.close();
+//    System.exit(0);
