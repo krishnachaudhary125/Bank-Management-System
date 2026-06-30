@@ -77,6 +77,6 @@ public class Bank {
             System.out.println("Account not found.");
             return;
         }
-        account.delete(accountNumber);
+        accounts.remove(account);
     }
 }
