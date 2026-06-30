@@ -110,4 +110,29 @@ public class Account {
             System.out.println("Invalid amount.");
         }
     }
+
+    public void sendMoney(double amount){
+        if(amount > 0 && amount <= balance){
+            balance -= amount;
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Transferred successful!");
+            System.out.println("Transferred amount : "+amount);
+            System.out.println("Current Balance: " + balance);
+        }else if(amount > balance) {
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Insufficient balance.");
+        }else{
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Invalid amount.");
+        }
+    }
+    public void receiveMoney(double amount){
+        if(amount>0){
+            balance += amount;
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Amount received successfully!");
+            System.out.println("Received amount : "+amount);
+            System.out.println("Current Balance: " + balance);
+        }
+    }
 }
