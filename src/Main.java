@@ -94,14 +94,15 @@ public class Main {
                     bank.deleteAccount(accountNumber);
                     break;
 
+                case 8:
+                    System.out.println("Thank you for using Bank Management System!");
+                    sc.close();
+                    System.exit(0);
+                    break;
+
                 default:
                     System.out.println("Invalid Choice");
             }
-        }while(choice != 8);
+        }while(choice != 9);
     }
 }
-
-//case 8:
-//        System.out.println("Thank you for using Bank Management System!");
-//    scanner.close();
-//    System.exit(0);
