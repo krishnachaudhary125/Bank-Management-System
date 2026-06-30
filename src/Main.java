@@ -48,6 +48,12 @@ public class Main {
                     bank.viewAllAccounts();
                     break;
 
+                case 3:{
+                    System.out.println("\n--------------------------------------------------------");
+                    System.out.print("Enter account number : ");
+                    int accountNumber = sc.nextInt();
+                    bank.searchAccount(accountNumber);}
+                    break;
                 default:
                     System.out.println("Invalid Choice");
             }

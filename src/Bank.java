@@ -17,4 +17,25 @@ public class Bank {
             }
         }
     }
+
+    public Account findAccount(int accountNumber) {
+
+        for (Account account : accounts) {
+            if (account.getAccountNumber() == accountNumber) {
+                return account;
+            }
+        }
+        return null;
+    }
+
+    public void searchAccount(int accountNumber) {
+
+        Account account = findAccount(accountNumber);
+
+        if (account != null) {
+            account.displayAccount();
+        } else {
+            System.out.println("Account not found.");
+        }
+    }
 }
