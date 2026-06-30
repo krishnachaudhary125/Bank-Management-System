@@ -72,6 +72,19 @@ public class Main {
                     double amount = sc.nextDouble();
                     bank.withdrawMoney(accountNumber, amount);}
                     break;
+
+                case 6:
+                    System.out.println("\n--------------------------------------------------------");
+                    System.out.print("Enter sender account number : ");
+                    int senderAccountNumber = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter Receiver account number : ");
+                    int receiverAccountNumber = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter the amount to transfer : ");
+                    double amount = sc.nextDouble();
+                    bank.transferMoney(senderAccountNumber, receiverAccountNumber, amount);
+                    break;
                 default:
                     System.out.println("Invalid Choice");
             }
