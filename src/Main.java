@@ -85,6 +85,15 @@ public class Main {
                     double amount = sc.nextDouble();
                     bank.transferMoney(senderAccountNumber, receiverAccountNumber, amount);
                     break;
+
+                case 7:
+                    System.out.println("\n--------------------------------------------------------");
+                    System.out.println("Enter account number to delete account : ");
+                    int accountNumber = sc.nextInt();
+                    sc.nextLine();
+                    bank.deleteAccount(accountNumber);
+                    break;
+
                 default:
                     System.out.println("Invalid Choice");
             }
