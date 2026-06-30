@@ -38,4 +38,14 @@ public class Bank {
             System.out.println("Account not found.");
         }
     }
+
+    public void depositMoney(int accountNumber, double amount) {
+
+        Account account = findAccount(accountNumber);
+        if (account == null) {
+            System.out.println("Account not found.");
+            return;
+        }
+        account.deposit(amount);
+    }
 }

@@ -82,13 +82,20 @@ public class Account {
         System.out.println("Address             : "+address);
         System.out.println("Account Type        : "+accountType);
         System.out.println("Balance             : "+balance);
-        System.out.println("--------------------------------------------------------");
     }
 
     public void deposit(double amount){
-
+        if(balance > 0){
+            balance += amount;
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Deposit Successful!");
+            System.out.println("Current Balance: " + balance);
+        }else{
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("");
+        }
     }
-    public void withdraw(double amount){
+    public void withdraw(double balance){
 
     }
 }

@@ -36,12 +36,10 @@ public class Main {
                     String accountType = sc.nextLine();
                     System.out.print("Enter opening balance : ");
                     double balance = sc.nextDouble();
-                    System.out.println("--------------------------------------------------------");
                     Account account = new Account(
                             accountNumber, accountHolderName, phoneNumber, email, address, accountType, balance
                     );
-                    bank.createAccount(account);
-                    System.out.println("--------------------------------------------------------");}
+                    bank.createAccount(account);}
                     break;
 
                 case 2:
@@ -53,6 +51,16 @@ public class Main {
                     System.out.print("Enter account number : ");
                     int accountNumber = sc.nextInt();
                     bank.searchAccount(accountNumber);}
+                    break;
+
+                case 4:{
+                    System.out.println("\n--------------------------------------------------------");
+                    System.out.print("Enter account number : ");
+                    int accountNumber = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter balance      : ");
+                    double amount = sc.nextDouble();
+                    bank.depositMoney(accountNumber, amount);}
                     break;
                 default:
                     System.out.println("Invalid Choice");
