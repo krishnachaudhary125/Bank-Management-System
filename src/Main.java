@@ -18,7 +18,35 @@ public class Main {
             System.out.print("Enter choice : ");
             choice = sc.nextInt();
 
+            switch(choice){
+                case 1:{
+                    System.out.println("\n--------------------------------------------------------");
+                    System.out.print("Enter account number  : ");
+                    int accountNumber = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter your name       : ");
+                    String accountHolderName = sc.nextLine();
+                    System.out.print("Enter phone number    : ");
+                    String phoneNumber = sc.nextLine();
+                    System.out.print("Enter email           : ");
+                    String email = sc.nextLine();
+                    System.out.print("Enter address         : ");
+                    String address = sc.nextLine();
+                    System.out.print("Enter account type    : ");
+                    String accountType = sc.nextLine();
+                    System.out.print("Enter opening balance : ");
+                    double balance = sc.nextDouble();
+                    System.out.println("--------------------------------------------------------");
+                    Account account = new Account(
+                            accountNumber, accountHolderName, phoneNumber, email, address, accountType, balance
+                    );
+                    bank.createAccount(account);
+                    System.out.println("--------------------------------------------------------");}
+                    break;
 
+                default:
+                    System.out.println("Invalid Choice");
+            }
         }while(choice != 8);
     }
 }
