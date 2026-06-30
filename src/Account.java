@@ -85,17 +85,29 @@ public class Account {
     }
 
     public void deposit(double amount){
-        if(balance > 0){
+        if(amount > 0){
             balance += amount;
             System.out.println("\n--------------------------------------------------------");
             System.out.println("Deposit Successful!");
             System.out.println("Current Balance: " + balance);
         }else{
             System.out.println("\n--------------------------------------------------------");
-            System.out.println("");
+            System.out.println("Invalid amount.");
         }
     }
-    public void withdraw(double balance){
-
+    public void withdraw(double amount){
+        if(amount > 0 && amount <= balance){
+            balance -= amount;
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Withdraw Successful!");
+            System.out.println("Withdrawn amount: "+ amount);
+            System.out.println("Current Balance: " + balance);
+        }else if(amount > balance){
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Insufficient balance.");
+        }else{
+            System.out.println("\n--------------------------------------------------------");
+            System.out.println("Invalid amount.");
+        }
     }
 }
