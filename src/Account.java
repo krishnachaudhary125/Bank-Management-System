@@ -72,4 +72,23 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    public void displayAccount(){
+        System.out.println("\n--------------------------------------------------------");
+        System.out.println("Account Number      : "+accountNumber);
+        System.out.println("Account Holder Name : "+accountHolderName);
+        System.out.println("Phone Number        : "+phoneNumber);
+        System.out.println("Email               : "+email);
+        System.out.println("Address             : "+address);
+        System.out.println("Account Type        : "+accountType);
+        System.out.println("Balance             : "+balance);
+        System.out.println("--------------------------------------------------------");
+    }
+
+    public void deposit(double amount){
+
+    }
+    public void withdraw(double amount){
+
+    }
 }

@@ -44,6 +44,10 @@ public class Main {
                     System.out.println("--------------------------------------------------------");}
                     break;
 
+                case 2:
+                    bank.viewAllAccounts();
+                    break;
+
                 default:
                     System.out.println("Invalid Choice");
             }
